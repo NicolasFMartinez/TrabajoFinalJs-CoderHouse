@@ -1,0 +1,27 @@
+
+
+/*logo del navbar*/
+.logo{
+    height:150px ;
+    width: 150px
+}
+/* imagenes del footer*/
+.img_bem {
+    height: 75px;
+    width: 75px;
+}
+/* imagenes de productos*/
+.img_pro {
+    height: 370px;
+    width: 370px;
+    border-radius: 8px;
+    max-width: 100%;
+}
+@media only screen and (max-width: 767px) {
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+}
