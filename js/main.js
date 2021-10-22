@@ -59,6 +59,11 @@ catalogo.push(new producto("Piluso", "PilusoBatik", 750, 7));
 catalogo.push(new producto("Piluso", "PilusoNaranja", 600, 5));
 catalogo.push(new producto("Piluso", "PilusoBlanco", 590, 4));
 
+const guardarLocal=(clave,valor)=>{localStorage.setItem(clave,valor)};
+
+guardarLocal("listaPrpductos",JSON.stringify(catalogo));
+    
+
 console.log(catalogo);
 const Buzo = catalogo.slice(0, 5);
 console.log(Buzo);
