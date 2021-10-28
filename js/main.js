@@ -136,3 +136,6 @@ if(usuario.value=="nico"&& passw.value=="1234"){
     console.log("Error en los datos")
 }
 }
+
+let boton=document.getElementById("boton");
+boton.addEventListener("click",Validar);
