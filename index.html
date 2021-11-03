@@ -89,7 +89,7 @@
         </div>
       </div>
     </div>
-    <div class=" container mt-5">
+    <div class=" container mt-5" id="listaProductos">
       <div class=" row">
         <div class=" col-md-12">
           <h2 class=" text-center encabezado"> Todos los productos</h2>
@@ -101,21 +101,21 @@
           <p><img src="/img/buzoatenas.jpeg" alt="Nuzo Ateneas" class=" img-fluid img_pro  "></p>
           <h5 class="text-center">Buzo Atenas</h5>
           <p><span class="text-center"> $3.000</span></p>
-          <button type="button" class="btn btn-dark botonCompra ">Agregar al carrito</button>
+          <button type="button" class="btn btn-dark botonCompra " data-id="1">Agregar al carrito</button>
         </div>
         <div class=" col-md-4 text-center">
 
           <p><img src="/img/mediasalien.jpeg" alt="Medias Alien" class=" img-fluid img_pro"></p>
           <h5>Medias Alien</h5>
           <p><span>$400</span></p>
-          <button type="button" class="btn btn-dark botonCompra ">Agregar al carrito</button>
+          <button type="button" class="btn btn-dark botonCompra " data-id="2">Agregar al carrito</button>
         </div>
         <div class=" col-md-4 text-center">
 
           <p><img src="/img/remerabatikcolo.jpeg" alt="Notebook" class=" img-fluid img_pro"></p>
           <h5>Remera Tye Die</h5>
           <p><span>$1.500</span></p>
-          <button type="button" class="btn btn-dark botonCompra ">Agregar al carrito</button>
+          <button type="button" class="btn btn-dark botonCompra " data-id="3">Agregar al carrito</button>
         </div>
       </div>
       <div class=" row mt-5">
@@ -124,37 +124,40 @@
           <p><img src="/img/remerafungi.jpeg" alt="Notebook" class=" img-fluid img_pro"></p>
           <h5>Remera Fungi</h5>
           <p><span>$1.500</span></p>
-          <button type="button" class="btn btn-dark botonCompra">Agregar al carrito</button>
+          <button type="button" class="btn btn-dark botonCompra" data-id="4">Agregar al carrito</button>
         </div>
         <div class=" col-md-4 text-center">
 
           <p><img src="img/lentesboston.jpeg" alt="Notebook" class=" img-fluid img_pro"></p>
           <h5>Lentes Boston</h5>
           <p><span>$2.000</span></p>
-          <button type="button" class="btn btn-dark botonCompra">Agregar al carrito</button>
+          <button type="button" class="btn btn-dark botonCompra" data-id="5">Agregar al carrito</button>
         </div>
         <div class=" col-md-4 text-center">
 
           <p><img src="/img/pilusobatik.jpeg" alt="Notebook" class=" img-fluid img_pro"></p>
           <h5>Piluso Batik</h5>
           <p><span>$600</span></p>
-          <button type="button" class="btn btn-dark botonCompra ">Agregar al carrito</button>
+          <button type="button" class="btn btn-dark botonCompra " data-id="6">Agregar al carrito</button>
         </div>
       </div>
-      <div class=" row mt-5">
-        <div class=" col-md-12">
-          <table class=" table table-dark">
+      <div class=" row mt-5" >
+        <div class=" col-md-12  text-center" id="carrito">
+          <table class=" table table-dark" id="listaCarrito">
             <thead>
               <tr>
+              <td>Imagen</td>
               <td>Producto</td>
               <td>Cantidad</td>
               <td>Precio</td>
+              <td></td>
               </tr>
             </thead>
-            <tbody id="tbody">
+            <tbody>
               
             </tbody>
           </table>
+          <button type="button" class="btn btn-danger   encabezado  text-center " id="vaciarCarrito" role="button">Vaciar Carrito</button>
         </div>
       </div>
       <div class=" row mt-3 ">
@@ -219,7 +222,8 @@
       </div>
     </div>
   </div>
-  <script src=" ../js/main.js"></script>
+  <!--<script src=" ../js/main.js"></script>-->
+  <script src="../js/carrito.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
   </script>

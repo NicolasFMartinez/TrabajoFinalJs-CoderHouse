@@ -140,7 +140,7 @@ if(usuario.value=="nico"&& passw.value=="1234"){
 let boton=document.getElementById("boton");
 boton.addEventListener("click",Validar);
 //carrito
-
+/*
 let botonCompra=document.querySelectorAll(".botonCompra");
 let carrito=[];
 
@@ -176,4 +176,4 @@ fila.innerHTML=`<td>${producto.nombre}</td>
                 <td><button class="btn btn-danger>Eliminar</button></td>`
 let tbody=document.getElementById("tbody");
 tbody.appendChild(fila);
-}
+}*/
