@@ -72,6 +72,7 @@ function leerDatosProductos(producto) {
     }else{
         //agregamos el producto al carrito
         articulosCarrito = [...articulosCarrito, infoProducto];
+        alert("Agrego al carrito " + infoProducto.titulo )
     }
     
     
@@ -100,7 +101,11 @@ function carritoHtml() {
 
         // agrega el html en el tbody
         contenedorCarrito.appendChild(row);
-    })
+    });
+    //guardar el arreglo articuloscarritos
+const guardarLocal=(clave,valor)=>{localStorage.setItem(clave,valor)};
+
+guardarLocal("carrito",JSON.stringify(articulosCarrito));
 }
 
 //Eliminar los productos de tbody
@@ -111,7 +116,3 @@ function limpiarHtml() {
     }
 }
 
-//guardar el arreglo articuloscarritos
-const guardarLocal=(clave,valor)=>{localStorage.setItem(clave,valor)};
-
-guardarLocal("carrito",JSON.stringify(articulosCarrito));
