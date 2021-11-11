@@ -80,50 +80,7 @@ console.log(Piluso);
 const Economicos = catalogo.filter(producto => producto.precio <= 1000);
 console.log(Economicos);
 
-function elejirfiltro() {
 
-
-    let filtro = parseInt(prompt(" Elegi, queres ordenarlos por precio (1) o alfabeticamente (2)? *Ingresa el numero "))
-    
-    if (filtro == 1) {
-
-        console.log("Elegiste por precio")
-
-        catalogo.sort(function (precio1, precio2) {
-
-            if (precio1.precio > precio2.precio) { 
-
-                return 1;
-            } else if (precio1.precio < precio2.precio) {
-                return -1;
-            } else {
-                return 0;
-            }
-
-        });
-        console.log(catalogo);
-
-
-    } else if (filtro == 2) {
-
-        console.log("Elegiste alfabeticamente")
-
-        catalogo.sort(function (a, b) {
-            if (a.nombre > b.nombre) 
-                return 1;
-            if (a.nombre < b.nombre)
-                return -1;
-            return 0
-        });
-        console.log(catalogo);
-
-    } else {
-        console.log("error")
-    }
-}
-
-
-elejirfiltro();
 function Validar(){
 let usuario=document.getElementById("usuario");
 let passw=document.getElementById("pass");
