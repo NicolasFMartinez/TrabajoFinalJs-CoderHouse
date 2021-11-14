@@ -9,15 +9,21 @@ cargarEventListeners();
 function cargarEventListeners() {
     //Cuando agregas un producto presionadno "Agregar al carrito"
     listaProductos.addEventListener("click", agregarProducto);
-    
+
     //Elimina los productos del carrito
-    carrito.addEventListener("click",eliminarProducto);
+    carrito.addEventListener("click", eliminarProducto);
 
     //Vaciar carrito
-    vaciarCarritoBtn.addEventListener("click",() => {
-        articulosCarrito=[];//reseteamos el carrito
+    vaciarCarritoBtn.addEventListener("click", () => {
+        articulosCarrito = []; //reseteamos el carrito
 
-        limpiarHtml();//eliminamos todo el html
+        limpiarHtml(); //eliminamos todo el html
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+
+        articulosCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+        carritoHTML();
     })
 }
 
@@ -34,12 +40,12 @@ function agregarProducto(e) {
     }
 }
 //Eliminar productos del carrito
-function eliminarProducto(e){
-    if(e.target.classList.contains("borrarProducto")){
-        const productoId= e.target.getAttribute("data-id");
+function eliminarProducto(e) {
+    if (e.target.classList.contains("borrarProducto")) {
+        const productoId = e.target.getAttribute("data-id");
         //Elimina del arreglo de articuloCarrito por el data-id
-        articulosCarrito=articulosCarrito.filter(producto=>producto.id!==productoId);
-        carritoHtml();//itineramos el carrito y lo reflejamos en el html
+        articulosCarrito = articulosCarrito.filter(producto => producto.id !== productoId);
+        carritoHtml(); //itineramos el carrito y lo reflejamos en el html
     }
 }
 
@@ -57,28 +63,36 @@ function leerDatosProductos(producto) {
     }
 
     //revisa si un producto ya existe en el carrito
-    const existe= articulosCarrito.some(producto=>producto.id===infoProducto.id);
-    if(existe){
+    const existe = articulosCarrito.some(producto => producto.id === infoProducto.id);
+    if (existe) {
         //Actualizamos la cantidad
-        const productos=articulosCarrito.map(producto=>{
-            if(producto.id===infoProducto.id){
+        const productos = articulosCarrito.map(producto => {
+            if (producto.id === infoProducto.id) {
                 producto.cantidad++;
-                return producto;//retorna el objeto actualizado
-            }else{
-                return producto;//retorna los productos no duplicados
+                return producto; //retorna el objeto actualizado
+            } else {
+                return producto; //retorna los productos no duplicados
             }
         });
-        articulosCarrito=[...productos];
-    }else{
+        articulosCarrito = [...productos];
+    } else {
         //agregamos el producto al carrito
         articulosCarrito = [...articulosCarrito, infoProducto];
-        alert("Agrego al carrito " + infoProducto.titulo )
+        
+        Swal.fire({
+  title: 'Agregado!',
+  text: "Agrego al carrito " + infoProducto.titulo,
+  imageUrl: infoProducto.imagen,
+  imageWidth: 400,
+  imageHeight: 400,
+  imageAlt: 'Custom image',
+})
     }
-    
-    
+
+
     //agregar elementos al arreglo de carrito
 
-    
+
     console.log(articulosCarrito);
     carritoHtml();
 
@@ -94,7 +108,7 @@ function carritoHtml() {
     articulosCarrito.forEach(producto => {
         const row = document.createElement("tr");
         row.innerHTML = `<td><img src="${producto.imagen}" width="100"</td>
-                   <td>${producto.titulo}</td>
+                   <td>${producto.titulo }</td>
                    <td>${producto.cantidad}</td>
                     <td>${producto.precio}</td>
                     <td><button class="btn btn-danger borrarProducto" data-id="${producto.id}">X</button> </td>`;
@@ -103,9 +117,13 @@ function carritoHtml() {
         contenedorCarrito.appendChild(row);
     });
     //guardar el arreglo articuloscarritos
-const guardarLocal=(clave,valor)=>{localStorage.setItem(clave,valor)};
+    sincronizarStorage();
 
-guardarLocal("carrito",JSON.stringify(articulosCarrito));
+    function sincronizarStorage() {
+
+        localStorage.setItem('carrito', JSON.stringify(articulosCarrito));
+
+    }
 }
 
 //Eliminar los productos de tbody
@@ -115,4 +133,3 @@ function limpiarHtml() {
         contenedorCarrito.removeChild(contenedorCarrito.firstChild)
     }
 }
-

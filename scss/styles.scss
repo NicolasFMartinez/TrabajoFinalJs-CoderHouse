@@ -99,3 +99,22 @@ a{
 .jqDisplay{
     display: none;
 }
+.carrito{
+    color: white;
+    height: 4rem;
+}
+img.carrito {
+    color: white;
+}
+.rowCarrito {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    text-align: center;
+}
+.card-body{
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    margin: .25rem;
+}
+

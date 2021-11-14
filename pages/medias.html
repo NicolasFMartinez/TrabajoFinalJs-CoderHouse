@@ -8,7 +8,7 @@
   <meta name="Description" content="Pagina de la tienda online LimoTienda">
   <meta name=" keywords" content="Ropa moda lentes remeras nogenere limo tienda medias gorras pilusos collares ">
   <meta name="Author" content="Nicolás Francisco Martínez">
-  <meta http-equiv="refresh" content="30">
+
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,9 +55,40 @@
             </li>
           </ul>
         </div>
+        <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"><img class="carrito img-fluid fa-thin fa-user" src="../img/carrito.png" alt="">
+        </button>
+
       </div>
     </nav>
   </header>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasRightLabel"> Carrito de compras</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="carrito" class="rowCarrito">
+        <table id="listaCarrito" class="u-full-width">
+          <div>
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </div>
+        </table>
+        <button type="button" class="btn btn-danger   encabezado  text-center " id="vaciarCarrito" role="button">Vaciar
+          Carrito</button>
+      </div>
+    </div>
+  </div>
   <main>
     <div class=" container-fluid mt-3">
       <div class=" row">
@@ -85,81 +116,99 @@
     <div class=" container mt-4" id="listaProductos">
       <div class=" row">
         <div class=" col-md-4 mt-4 text-center">
-
-          <p><img src="/img/mediasalien.jpeg" alt="Medias Alien" class=" img-fluid img_pro"></p>
-          <h5>Medias Alien</h5>
-          <p><span>$400</span></p>
-          <button type="button" class="btn btn-dark botonCompra" data-id="2">Agregar al carrito</button>
+          <div class="card-body">
+            <p><img src="/img/mediasalien.jpeg" alt="Medias Alien" class=" img-fluid img_pro"></p>
+            <h5>Medias Alien</h5>
+            <p><span>$400</span></p>
+            <hr>
+            <button type="button" class="btn btn-dark botonCompra" data-id="2">Agregar al carrito</button>
+          </div>
         </div>
         <div class=" col-md-4 mt-4 text-center">
-
-          <p><img src="/img/mediasdrake.jpeg" alt="Medias Drake" class=" img-fluid img_pro"></p>
-          <h5>Medias Drake</h5>
-          <p><span>$390</span></p>
-          <button type="button" class="btn btn-dark botonCompra" data-id="43">Agregar al carrito</button>
+          <div class="card-body">
+            <p><img src="/img/mediasdrake.jpeg" alt="Medias Drake" class=" img-fluid img_pro"></p>
+            <h5>Medias Drake</h5>
+            <p><span>$390</span></p>
+            <hr>
+            <button type="button" class="btn btn-dark botonCompra" data-id="43">Agregar al carrito</button>
+          </div>
         </div>
         <div class=" col-md-4 mt-4 text-center">
-
-          <p><img src="/img/mediasfire.jpeg" alt="Medias Fire" class=" img-fluid img_pro"></p>
-          <h5>Medias Fire</h5>
-          <p><span>$500</span></p>
-          <button type="button" class="btn btn-dark botonCompra" data-id="21">Agregar al carrito</button>
+          <div class="card-body">
+            <p><img src="/img/mediasfire.jpeg" alt="Medias Fire" class=" img-fluid img_pro"></p>
+            <h5>Medias Fire</h5>
+            <p><span>$500</span></p>
+            <hr>
+            <button type="button" class="btn btn-dark botonCompra" data-id="21">Agregar al carrito</button>
+          </div>
         </div>
       </div>
       <div class=" row">
         <div class=" col-md-4 mt-4 text-center">
-
-          <p><img src="/img/mediasfrute.jpeg" alt="Medias Frute" class=" img-fluid img_pro"></p>
-          <h5>Medias Frute</h5>
-          <p><span>$390</span></p>
-          <button type="button" class="btn btn-dark botonCompra" data-id="22">Agregar al carrito</button>
+          <div class="card-body">
+            <p><img src="/img/mediasfrute.jpeg" alt="Medias Frute" class=" img-fluid img_pro"></p>
+            <h5>Medias Frute</h5>
+            <p><span>$390</span></p>
+            <hr>
+            <button type="button" class="btn btn-dark botonCompra" data-id="22">Agregar al carrito</button>
+          </div>
         </div>
         <div class=" col-md-4 mt-4 text-center">
-
-          <p><img src="/img/mediasfuck.jpeg" alt="Medias Fuck" class=" img-fluid img_pro"></p>
-          <h5>Medias FuckYou</h5>
-          <p><span>$400</span></p>
-          <button type="button" class="btn btn-dark botonCompra" data-id="23">Agregar al carrito</button>
+          <div class="card-body">
+            <p><img src="/img/mediasfuck.jpeg" alt="Medias Fuck" class=" img-fluid img_pro"></p>
+            <h5>Medias FuckYou</h5>
+            <p><span>$400</span></p>
+            <hr>
+            <button type="button" class="btn btn-dark botonCompra" data-id="23">Agregar al carrito</button>
+          </div>
         </div>
         <div class=" col-md-4 mt-4 text-center">
-
-          <p><img src="/img/mediasprideb.jpeg" alt="Medias Pride Black" class=" img-fluid img_pro"></p>
-          <h5>Medias Pride Black</h5>
-          <p> <span>$450</span></p>
-          <button type="button" class="btn btn-dark botonCompra" data-id="24">Agregar al carrito</button>
+          <div class="card-body">
+            <p><img src="/img/mediasprideb.jpeg" alt="Medias Pride Black" class=" img-fluid img_pro"></p>
+            <h5>Medias Pride Black</h5>
+            <p> <span>$450</span></p>
+            <hr>
+            <button type="button" class="btn btn-dark botonCompra" data-id="24">Agregar al carrito</button>
+          </div>
         </div>
       </div>
       <div class=" row">
         <div class=" col-md-4 mt-4 text-center">
-
-          <p><img src="/img/mediaspridew.jpeg" alt="Medias Pride White" class=" img-fluid img_pro"></p>
-          <h5>Medias Pride White</h5>
-          <p><span>$400</span></p>
-          <button type="button" class="btn btn-dark botonCompra" data-id="25">Agregar al carrito</button>
+          <div class="card-body">
+            <p><img src="/img/mediaspridew.jpeg" alt="Medias Pride White" class=" img-fluid img_pro"></p>
+            <h5>Medias Pride White</h5>
+            <p><span>$400</span></p>
+            <hr>
+            <button type="button" class="btn btn-dark botonCompra" data-id="25">Agregar al carrito</button>
+          </div>
         </div>
         <div class=" col-md-4 mt-4 text-center">
-
-          <p><img src="/img/mediassativa.jpeg" alt="Medias Sativa" class=" img-fluid img_pro"></p>
-          <h5>Medias Sativa</h5>
-          <p><span>$425</span></p>
-          <button type="button" class="btn btn-dark botonCompra" data-id="26">Agregar al carrito</button>
+          <div class="card-body">
+            <p><img src="/img/mediassativa.jpeg" alt="Medias Sativa" class=" img-fluid img_pro"></p>
+            <h5>Medias Sativa</h5>
+            <p><span>$425</span></p>
+            <hr>
+            <button type="button" class="btn btn-dark botonCompra" data-id="26">Agregar al carrito</button>
+          </div>
         </div>
         <div class=" col-md-4 mt-4 text-center">
-
-         <p><img src="/img/mediasska.jpeg" alt="Medias Ska" class=" img-fluid img_pro"></p>
-                    <h5>Medias Ska</h5>
-                    <p><span>$390</span></p>
-                    <button type="button" class="btn btn-dark botonCompra" data-id="27">Agregar al carrito</button>
+          <div class="card-body">
+            <p><img src="/img/mediasska.jpeg" alt="Medias Ska" class=" img-fluid img_pro"></p>
+            <h5>Medias Ska</h5>
+            <p><span>$390</span></p>
+            <hr>
+            <button type="button" class="btn btn-dark botonCompra" data-id="27">Agregar al carrito</button>
+          </div>
         </div>
       </div>
-</div>
+    </div>
   </main>
   <hr class=" mt-5">
   <footer>
     <div class=" container-fluid mt-5">
       <div class=" row">
         <div class=" col-md-7">
-          <h3 class="encabezado">Medios de pago</h3>
+          <h3 class="encabezado text-center">Medios de pago</h3>
           <img src="../img/visa.png" alt="Visa" title="Visa" class=" img-fluid " />
           <img src="../img/american-express.png" alt="American express" title="american-express" class=" img-fluid " />
           <img src="../img/argencard.png" alt="Argent card" title="Argen-Card" class=" img-fluid " />
@@ -178,7 +227,7 @@
       </div>
       <div class=" row mt-2">
         <div class=" col-md-7">
-          <h3 class="encabezado"> Formas de envio</h3>
+          <h3 class="encabezado text-center"> Formas de envio</h3>
           <div class=" footer">
             <img src="../img/correo-argentino.png" alt="Correo Argentino" title="Correo Argentino"
               class=" img-fluid " />

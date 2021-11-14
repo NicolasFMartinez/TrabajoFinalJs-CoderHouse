@@ -8,7 +8,7 @@
     <meta name="Description" content="Pagina de la tienda online LimoTienda">
     <meta name=" keywords" content="Ropa moda lentes remeras nogenere limo tienda medias gorras pilusos collares ">
     <meta name="Author" content="Nicolás Francisco Martínez">
-    <meta http-equiv="refresh" content="30">
+
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,9 +56,42 @@
                         </li>
                     </ul>
                 </div>
+                <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img
+                        class="carrito img-fluid fa-thin fa-user" src="../img/carrito.png" alt="">
+                </button>
+
             </div>
         </nav>
     </header>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel"> Carrito de compras</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="carrito" class="rowCarrito">
+                <table id="listaCarrito" class="u-full-width">
+                    <div>
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </div>
+                </table>
+                <button type="button" class="btn btn-danger   encabezado  text-center " id="vaciarCarrito"
+                    role="button">Vaciar
+                    Carrito</button>
+            </div>
+        </div>
+    </div>
     <main>
         <div class=" container-fluid mt-3">
             <div class=" row">
@@ -81,106 +114,139 @@
                 </div>
             </div>
         </div>
-        
-            
+
+
         <div class=" container mt-4" id="listaProductos">
             <div class=" row">
                 <div class=" col-md-3 mt-4 text-center">
-
-                    <p><img src="/img/lentesbalvin.jpeg" alt="Lentes Balvin" class=" img-fluid img_pro"></p>
-                    <h5>Lentes Balvin</h5>
-                    <p><span>$1400</span></p>
-                    <button type="button" class="btn btn-dark botonCompra" data-id="9">Agregar al carrito</button>
+                    <div class="card-body">
+                        <p><img src="/img/lentesbalvin.jpeg" alt="Lentes Balvin" class=" img-fluid img_pro"></p>
+                        <h5>Lentes Balvin</h5>
+                        <p><span>$1400</span></p>
+                        <hr>
+                        <button type="button" class="btn btn-dark botonCompra" data-id="9">Agregar al carrito</button>
+                    </div>
                 </div>
                 <div class=" col-md-3 mt-4 text-center">
-
-                    <p><img src="/img/lentesboston.jpeg" alt="Lentes Boston" class=" img-fluid img_pro"></p>
-                    <h5>Lentes Boston</h5>
-                    <p><span>$1500</span></p>
-                    <button type="button" class="btn btn-dark botonCompra" data-id="10">Agregar al carrito</button>
+                    <div class="card-body">
+                        <p><img src="/img/lentesboston.jpeg" alt="Lentes Boston" class=" img-fluid img_pro"></p>
+                        <h5>Lentes Boston</h5>
+                        <p><span>$1500</span></p>
+                        <hr>
+                        <button type="button" class="btn btn-dark botonCompra" data-id="10">Agregar al carrito</button>
+                    </div>
                 </div>
                 <div class=" col-md-3 mt-4 text-center">
-
-                    <p><img src="/img//lentescardy.jpeg" alt="Lentes CArdy" class=" img-fluid img_pro"></p>
-                    <h5>Lentes Cardy</h5>
-                    <p<span>$1700</span></p>
-                    <button type="button" class="btn btn-dark botonCompra" data-id="11">Agregar al carrito</button>
+                    <div class="card-body">
+                        <p><img src="/img//lentescardy.jpeg" alt="Lentes CArdy" class=" img-fluid img_pro"></p>
+                        <h5>Lentes Cardy</h5>
+                        <p<span>$1700</span></p>
+                            <hr>
+                            <button type="button" class="btn btn-dark botonCompra" data-id="11">Agregar al
+                                carrito</button>
+                    </div>
                 </div>
                 <div class=" col-md-3 mt-4 text-center">
-
-                    <p><img src="/img/lenteskendall.jpeg" alt="Lentes Kendall" class=" img-fluid img_pro"></p>
-                    <h5>Lentes Kendall</h5>
-                    <p><span>$1300</span></p>
-                    <button type="button" class="btn btn-dark botonCompra" data-id="13">Agregar al carrito</button>
+                    <div class="card-body">
+                        <p><img src="/img/lenteskendall.jpeg" alt="Lentes Kendall" class=" img-fluid img_pro"></p>
+                        <h5>Lentes Kendall</h5>
+                        <p><span>$1300</span></p>
+                        <hr>
+                        <button type="button" class="btn btn-dark botonCompra" data-id="13">Agregar al carrito</button>
+                    </div>
                 </div>
-            <div class=" row mt-4 ml-2">
-                <div class=" col-md-3 mt-4 text-center">
-
-                    <p><img src="/img/lenteskurt.jpeg" alt="Lentes Kurt" class=" img-fluid img_pro"></p>
-                    <h5>Lentes Kurt </h5>
-                    <p><span>$1800</span></p>
-                    <button type="button" class="btn btn-dark botonCompra" data-id="14">Agregar al carrito</button>
+                <div class=" row mt-4 ml-2">
+                    <div class=" col-md-3 mt-4 text-center">
+                        <div class="card-body">
+                            <p><img src="/img/lenteskurt.jpeg" alt="Lentes Kurt" class=" img-fluid img_pro"></p>
+                            <h5>Lentes Kurt </h5>
+                            <p><span>$1800</span></p>
+                            <hr>
+                            <button type="button" class="btn btn-dark botonCompra" data-id="14">Agregar al
+                                carrito</button>
+                        </div>
+                    </div>
+                    <div class=" col-md-3 mt-4 text-center">
+                        <div class="card-body">
+                            <p><img src="/img/lentesnass.jpeg" alt="Lentes Nass" class=" img-fluid img_pro"></p>
+                            <h5>Lentes Nass</h5>
+                            <p><span>$1300</span></p>
+                            <hr>
+                            <button type="button" class="btn btn-dark botonCompra" data-id="15">Agregar al
+                                carrito</button>
+                        </div>
+                    </div>
+                    <div class=" col-md-3 mt-4 text-center">
+                        <div class="card-body">
+                            <p><img src="/img/lentesnasty.jpeg" alt="Lentes Nasty" class=" img-fluid img_pro"></p>
+                            <h5>Lentes Nasty</h5>
+                            <p><span>$1700</span></p>
+                            <hr>
+                            <button type="button" class="btn btn-dark botonCompra" data-id="16">Agregar al
+                                carrito</button>
+                        </div>
+                    </div>
+                    <div class=" col-md-3 mt-4 text-center">
+                        <div class="card-body">
+                            <p><img src="/img/lentesqueer.jpeg" alt="Lentes Queer" class=" img-fluid img_pro"></p>
+                            <h5>Lentes Queer</h5>
+                            <p><span>$1700</span></p>
+                            <hr>
+                            <button type="button" class="btn btn-dark botonCompra" data-id="17">Agregar al
+                                carrito</button>
+                        </div>
+                    </div>
                 </div>
-                <div class=" col-md-3 mt-4 text-center">
-
-                    <p><img src="/img/lentesnass.jpeg" alt="Lentes Nass" class=" img-fluid img_pro"></p>
-                    <h5>Lentes Nass</h5>
-                    <p><span>$1300</span></p>
-                    <button type="button" class="btn btn-dark botonCompra" data-id="15">Agregar al carrito</button>
-                </div>
-                <div class=" col-md-3 mt-4 text-center">
-
-                    <p><img src="/img/lentesnasty.jpeg" alt="Lentes Nasty" class=" img-fluid img_pro"></p>
-                    <h5>Lentes Nasty</h5>
-                    <p><span>$1700</span></p>
-                    <button type="button" class="btn btn-dark botonCompra" data-id="16">Agregar al carrito</button>
-                </div>
-                <div class=" col-md-3 mt-4 text-center">
-
-                    <p><img src="/img/lentesqueer.jpeg" alt="Lentes Queer" class=" img-fluid img_pro"></p>
-                    <h5>Lentes Queer</h5>
-                    <p><span>$1700</span></p>
-                    <button type="button" class="btn btn-dark botonCompra" data-id="17">Agregar al carrito</button>
+                <div class=" row mt-3">
+                    <div class=" col-md-3 mt-4 text-center">
+                        <div class="card-body">
+                            <p><img src="/img/lentesshilow.jpeg" alt="Lentes Shilow" class=" img-fluid img_pro"></p>
+                            <h5>Lentes Shilow</h5>
+                            <p><span>$1700</span></p>
+                            <hr>
+                            <button type="button" class="btn btn-dark botonCompra" data-id="18">Agregar al
+                                carrito</button>
+                        </div>
+                    </div>
+                    <div class=" col-md-3 mt-4 text-center">
+                        <div class="card-body">
+                            <p><img src="/img/lentestao.jpeg" alt="Lentes Tao" class=" img-fluid img_pro"></p>
+                            <h5>Lentes Tao</h5>
+                            <p><span>$1700</span></p>
+                            <hr>
+                            <button type="button" class="btn btn-dark botonCompra" data-id="19">Agregar al
+                                carrito</button>
+                        </div>
+                    </div>
+                    <div class=" col-md-3 mt-4 text-center">
+                        <div class="card-body">
+                            <p><img src="/img/lentestrish.jpeg" alt="Lentes Trish" class=" img-fluid img_pro"></p>
+                            <h5>Lentes Trish</h5>
+                            <p><span>$1700</span></p>
+                            <hr>
+                            <button type="button" class="btn btn-dark botonCompra" data-id="20">Agregar al
+                                carrito</button>
+                        </div>
+                    </div>
+                    <div class=" col-md-3 mt-4 text-center">
+                        <div class="card-body">
+                            <p><img src="/img/lentesyoko.jpeg" alt="Lentes Yoko" class=" img-fluid img_pro"></p>
+                            <h5>Lentes Yoko</h5>
+                            <p><span>$1500</span></p>
+                            <hr>
+                            <button type="button" class="btn btn-dark botonCompra" data-id="42">Agregar al
+                                carrito</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class=" row mt-3">
-                <div class=" col-md-3 mt-4 text-center">
-
-                    <p><img src="/img/lentesshilow.jpeg" alt="Lentes Shilow" class=" img-fluid img_pro"></p>
-                    <h5>Lentes Shilow</h5>
-                    <p><span>$1700</span></p>
-                    <button type="button" class="btn btn-dark botonCompra" data-id="18">Agregar al carrito</button>
-                </div>
-                <div class=" col-md-3 mt-4 text-center">
-
-                    <p><img src="/img/lentestao.jpeg" alt="Lentes Tao" class=" img-fluid img_pro"></p>
-                    <h5>Lentes Tao</h5>
-                    <p><span>$1700</span></p>
-                    <button type="button" class="btn btn-dark botonCompra" data-id="19">Agregar al carrito</button>
-                </div>
-                <div class=" col-md-3 mt-4 text-center">
-
-                    <p><img src="/img/lentestrish.jpeg" alt="Lentes Trish" class=" img-fluid img_pro"></p>
-                    <h5>Lentes Trish</h5>
-                    <p><span>$1700</span></p>
-                    <button type="button" class="btn btn-dark botonCompra" data-id="20">Agregar al carrito</button>
-                </div>
-                <div class=" col-md-3 mt-4 text-center">
-
-                    <p><img src="/img/lentesyoko.jpeg" alt="Lentes Yoko" class=" img-fluid img_pro"></p>
-                    <h5>Lentes Yoko</h5>
-                    <p><span>$1500</span></p>
-                    <button type="button" class="btn btn-dark botonCompra" data-id="42">Agregar al carrito</button>
-                </div>
-            </div>
-        </div>
     </main>
     <hr class=" mt-5">
     <footer>
         <div class=" container-fluid mt-5">
             <div class=" row">
                 <div class=" col-md-7">
-                    <h3 class="encabezado">Medios de pago</h3>
+                    <h3 class="encabezado text-center">Medios de pago</h3>
                     <img src="../img/visa.png" alt="Visa" title="Visa" class=" img-fluid " />
                     <img src="../img/american-express.png" alt="American express" title="american-express"
                         class=" img-fluid " />
@@ -200,7 +266,7 @@
             </div>
             <div class=" row mt-2">
                 <div class=" col-md-7">
-                    <h3 class="encabezado"> Formas de envio</h3>
+                    <h3 class="encabezado text-center"> Formas de envio</h3>
                     <div class=" footer">
                         <img src="../img/correo-argentino.png" alt="Correo Argentino" title="Correo Argentino"
                             class=" img-fluid " />

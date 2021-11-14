@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="Description" content="Pagina de la tienda online LimoTienda">
-    <meta name=" keywords" content="Ropa moda lentes remeras nogenere limo tienda medias gorras pilusos collares " >
-    <meta name="Author" content="Nicolás Francisco Martínez">
-    <meta http-equiv="refresh" content="30">
+  <meta name=" keywords" content="Ropa moda lentes remeras nogenere limo tienda medias gorras pilusos collares ">
+  <meta name="Author" content="Nicolás Francisco Martínez">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +15,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/styles.css">
-  <link rel="shortcut icon" href="https://d22fxaf9t8d39k.cloudfront.net/74c44c3fac471e6cf91233b31a619b77c240d7ad14e5de991f17bd7b75619bcd13390.png"/>
+  <link rel="shortcut icon"
+    href="https://d22fxaf9t8d39k.cloudfront.net/74c44c3fac471e6cf91233b31a619b77c240d7ad14e5de991f17bd7b75619bcd13390.png" />
   <title>Inicio</title>
 </head>
 
@@ -35,8 +35,8 @@
               <a class="nav-link active" aria-current="page" href="#">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link dropdown-toggle" href="../pages/productos.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="../pages/productos.html" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
                 Productos
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -54,38 +54,57 @@
             </li>
           </ul>
         </div>
+        <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"><img class="carrito img-fluid fa-thin fa-user" src="../img/carrito.png" alt="">
+        </button>
+
       </div>
     </nav>
   </header>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasRightLabel"> Carrito de compras</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="carrito" class="rowCarrito">
+        <table id="listaCarrito" class="u-full-width">
+          <div>
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </div>
+        </table>
+        <button type="button" class="btn btn-danger   encabezado  text-center " id="vaciarCarrito" role="button">Vaciar
+          Carrito</button>
+      </div>
+    </div>
+  </div>
+
   <main>
     <div class=" container-fluid mt-3 bg-black catpri_bem">
       <div class=" row">
         <div class=" col-md-12">
           <h1 class=" text-center catpri encabezado"> Categorias Principales</h1>
           <div class=" text-center mt-4 headerflex ">
-            
+
             <button type="button" class="btn btn-dark btnIndex "><a href=" ../pages/buzos.html">Buzos</a> </button>
             <button type="button" class="btn btn-dark btnIndex "><a href="../pages/remeras.html">Remeras</a> </button>
             <button type="button" class="btn btn-dark btnIndex"><a href="../pages/lentes.html">Lentes</a></button>
             <button type="button" class="btn btn-dark btnIndex"><a href="../pages/medias.html">Medias</a></button>
-            <button type="button" class="btn btn-dark btnIndex"><a href="../pages/accesorios.html">Accesorios</a> </button>
+            <button type="button" class="btn btn-dark btnIndex"><a href="../pages/accesorios.html">Accesorios</a>
+            </button>
             <button type="button" class="btn btn-dark btnIndex"><a href="../pages/pilusos.html">Pilusos</a> </button>
             <button type="button" class="btn btn-dark btnIndex"><a href="../pages/gorras.html">Gorras</a> </button>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class=" container mt-3">
-      <div class="row">
-        <div class=" col-md-12 text-center formu">
-          <input type="text" id="usuario">
-          <br>
-          <input type="text" id="pass">
-          <br>
-          <div id="mensaje">
-
-          </div>
-          <button id="boton">Enviar</button>
         </div>
       </div>
     </div>
@@ -97,77 +116,71 @@
       </div>
       <div class=" row center-xs mt-5">
         <div class=" col-md-4 text-center ">
-
-          <p><img src="/img/buzoatenas.jpeg" alt="Nuzo Ateneas" class=" img-fluid img_pro  "></p>
-          <h5 class="text-center">Buzo Atenas</h5>
-          <p><span class="text-center"> $3.000</span></p>
-          <button type="button" class="btn btn-dark botonCompra " data-id="1">Agregar al carrito</button>
+          <div class="card-body">
+            <p><img src="/img/buzoatenas.jpeg" alt="Nuzo Ateneas" class=" img-fluid img_pro  "></p>
+            <h5 class="text-center card-title">Buzo Atenas</h5>
+            <p><span class="text-center"> $3.000</span></p>
+            <hr>
+            <button type="button" class="btn btn-dark botonCompra " data-id="1">Agregar al carrito</button>
+          </div>
+          </div>
+          <div class=" col-md-4 text-center">
+            <div class="card-body">
+            <p><img src="/img/mediasalien.jpeg" alt="Medias Alien" class=" img-fluid img_pro"></p>
+            <h5 class="text-center card-title">Medias Alien</h5>
+            <p><span class="text-center">$400</span></p>
+            <hr>
+            <button type="button" class="btn btn-dark botonCompra " data-id="2">Agregar al carrito</button>
+          </div>
+          </div>
+          <div class=" col-md-4 text-center">
+            <div class="card-body">
+            <p><img src="/img/remerabatikcolo.jpeg" alt="Notebook" class=" img-fluid img_pro"></p>
+            <h5 class="text-center card-title">Remera Tye Die</h5>
+            <p><span class="text-center">$1.500</span></p>
+            <hr>
+            <button type="button" class="btn btn-dark botonCompra " data-id="3">Agregar al carrito</button>
+          </div>
+          </div>
         </div>
-        <div class=" col-md-4 text-center">
-
-          <p><img src="/img/mediasalien.jpeg" alt="Medias Alien" class=" img-fluid img_pro"></p>
-          <h5>Medias Alien</h5>
-          <p><span>$400</span></p>
-          <button type="button" class="btn btn-dark botonCompra " data-id="2">Agregar al carrito</button>
+        <div class=" row mt-5">
+          <div class="  col-md-4 text-center">
+            <div class="card-body">
+            <p><img src="/img/remerafungi.jpeg" alt="Notebook" class=" img-fluid img_pro"></p>
+            <h5>Remera Fungi</h5>
+            <p><span>$1.500</span></p>
+            <hr>
+            <button type="button" class="btn btn-dark botonCompra" data-id="4">Agregar al carrito</button>
+          </div>
+          </div>
+          <div class=" col-md-4 text-center">
+            <div class="card-body">
+            <p><img src="img/lentesboston.jpeg" alt="Notebook" class=" img-fluid img_pro"></p>
+            <h5>Lentes Boston</h5>
+            <p><span>$2.000</span></p>
+            <hr>
+            <button type="button" class="btn btn-dark botonCompra" data-id="5">Agregar al carrito</button>
+          </div>
+          </div>
+          <div class=" col-md-4 text-center">
+            <div class="card-body">
+            <p><img src="/img/pilusobatik.jpeg" alt="Notebook" class=" img-fluid img_pro"></p>
+            <h5>Piluso Batik</h5>
+            <p><span>$600</span></p>
+            <hr>
+            <button type="button" class="btn btn-dark botonCompra " data-id="6">Agregar al carrito</button>
+          </div>
+          </div>
         </div>
-        <div class=" col-md-4 text-center">
 
-          <p><img src="/img/remerabatikcolo.jpeg" alt="Notebook" class=" img-fluid img_pro"></p>
-          <h5>Remera Tye Die</h5>
-          <p><span>$1.500</span></p>
-          <button type="button" class="btn btn-dark botonCompra " data-id="3">Agregar al carrito</button>
+        <div class=" row mt-3 ">
+          <div class=" col-md-12 text-center mt-5 ">
+            <button type="button" class="btn btn-dark   encabezado   " role="button"><a
+                href="pages/productos.html">VER
+                MAS</a></button>
+          </div>
         </div>
       </div>
-      <div class=" row mt-5">
-        <div class="  col-md-4 text-center">
-
-          <p><img src="/img/remerafungi.jpeg" alt="Notebook" class=" img-fluid img_pro"></p>
-          <h5>Remera Fungi</h5>
-          <p><span>$1.500</span></p>
-          <button type="button" class="btn btn-dark botonCompra" data-id="4">Agregar al carrito</button>
-        </div>
-        <div class=" col-md-4 text-center">
-
-          <p><img src="img/lentesboston.jpeg" alt="Notebook" class=" img-fluid img_pro"></p>
-          <h5>Lentes Boston</h5>
-          <p><span>$2.000</span></p>
-          <button type="button" class="btn btn-dark botonCompra" data-id="5">Agregar al carrito</button>
-        </div>
-        <div class=" col-md-4 text-center">
-
-          <p><img src="/img/pilusobatik.jpeg" alt="Notebook" class=" img-fluid img_pro"></p>
-          <h5>Piluso Batik</h5>
-          <p><span>$600</span></p>
-          <button type="button" class="btn btn-dark botonCompra " data-id="6">Agregar al carrito</button>
-        </div>
-      </div>
-      <div class=" row mt-5" >
-        <div class=" col-md-12  text-center" id="carrito">
-          <table class=" table table-dark" id="listaCarrito">
-            <thead>
-              <tr>
-              <td>Imagen</td>
-              <td>Producto</td>
-              <td>Cantidad</td>
-              <td>Precio</td>
-              <td></td>
-              </tr>
-            </thead>
-            <tbody>
-              
-            </tbody>
-          </table>
-          <button type="button" class="btn btn-danger   encabezado  text-center " id="vaciarCarrito" role="button">Vaciar Carrito</button>
-        </div>
-      </div>
-      <div class=" row mt-3 ">
-        <div class=" col-md-12 text-center mt-5 ">
-          <button type="button" class="btn btn-dark   encabezado   " role="button"><a
-              href="../pages/productos.html">VER
-              MAS</a></button>
-        </div>
-      </div>
-    </div>
   </main>
   <hr>
   <footer>
@@ -224,6 +237,7 @@
   </div>
   <!--<script src=" ../js/main.js"></script>-->
   <script src="../js/carrito.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
   </script>
