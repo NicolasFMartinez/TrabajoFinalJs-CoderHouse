@@ -38,7 +38,7 @@
   padding: 0; }
 
 .navbar_styles {
-  color: white; }
+  color: #bdbcbc; }
 
 a {
   text-decoration: none; }
@@ -119,3 +119,13 @@ img.carrito {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: .25rem;
   margin: .25rem; }
+
+#map {
+  height: 200px;
+  width: 100%;
+  border-radius: .25rem; }
+
+.contac {
+  height: 35px;
+  width: 35px;
+  border-radius: .25; }

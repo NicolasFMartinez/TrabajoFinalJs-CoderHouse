@@ -11,7 +11,7 @@
 
 ;
 .navbar_styles{
-    color: white;
+    color: rgb(189, 188, 188);
 }
 a{
     text-decoration: none;
@@ -117,4 +117,13 @@ img.carrito {
     border-radius: .25rem;
     margin: .25rem;
 }
-
+#map {
+    height: 200px;
+    width: 100%;
+    border-radius: .25rem;
+}
+.contac{
+    height: 35px;
+    width: 35px;
+    border-radius: .25;
+}
