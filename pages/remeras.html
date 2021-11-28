@@ -9,6 +9,7 @@
     <meta name=" keywords" content="Ropa moda lentes remeras nogenere limo tienda medias gorras pilusos collares ">
     <meta name="Author" content="Nicolás Francisco Martínez">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/compraFinal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap" rel="stylesheet">
@@ -55,6 +56,66 @@
                                 <a class="nav-link" href="../pages/scouting.html">Scouting</a>
                             </li>
                         </ul>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ya casi es tuy@</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class='credit-info'>
+                                            <div class='credit-info-content'>
+                                                <table class='half-input-table'>
+                                                    <tr>
+                                                        <td>Please select your card: </td>
+                                                        <td>
+                                                            <div class='dropdown' id='card-dropdown'>
+                                                                <div class='dropdown-btn' id='current-card'>Visa</div>
+                                                                <div class='dropdown-select'>
+                                                                    <ul>
+                                                                        <li>Master Card</li>
+                                                                        <li>American Express</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png'
+                                                    height='80' class='credit-card-image' id='credit-card-image'></img>
+                                                Card Number
+                                                <input class='input-field'></input>
+                                                Card Holder
+                                                <input class='input-field'></input>
+                                                <table class='half-input-table'>
+                                                    <tr>
+                                                        <td> Expires
+                                                            <input class='input-field'></input>
+                                                        </td>
+                                                        <td>CVC
+                                                            <input class='input-field'></input>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <button class='pay-btn'>Checkout</button>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-primary">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img
@@ -90,6 +151,9 @@
                     <button type="button" class="btn btn-danger   encabezado  text-center " id="vaciarCarrito"
                         role="button">Vaciar
                         Carrito</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Finalizar compra
+                    </button>
                 </div>
             </div>
         </div>>
@@ -121,7 +185,7 @@
                         <div class="card-body">
                             <p><img src="/img/remerabatikcolo.jpeg" alt="Remera Batik" class=" img-fluid img_pro"></p>
                             <h5>Remera Tye Die</h5>
-                            <p><span>$1.500</span></p>
+                            <p>$<span>1500</span></p>
                             <hr>
                             <button type="button" class="btn btn-dark botonCompra" data-id="3">Agregar al
                                 carrito</button>
@@ -132,7 +196,7 @@
                             <p><img src="/img/remerabatiksilver.jpeg" alt="Remera Silver" class=" img-fluid img_pro">
                             </p>
                             <h5>Remera Tye Die Silver</h5p>
-                                <p><span>$1850</span></p>
+                                <p>$<span>1850</span></p>
                                 <hr>
                                 <button type="button" class="btn btn-dark " data-id="32">Agregar al carrito</button>
                         </div>
@@ -141,7 +205,7 @@
                         <div class="card-body">
                             <p><img src="/img/remerafungi.jpeg" alt="Remera Fungi" class=" img-fluid img_pro"></p>
                             <h5>Remera Fungi</h5>
-                            <p><span>$1900</span></p>
+                            <p>$<span>1900</span></p>
                             <hr>
                             <button type="button" class="btn btn-dark botonCompra" data-id="31">Agregar al
                                 carrito</button>
@@ -152,7 +216,7 @@
                             <p><img src="/img/remeranoproblem.jpeg" alt="Remera No problem" class=" img-fluid img_pro">
                             </p>
                             <h5>Remera No problem</h5>
-                            <p><span>$1200</span></p>
+                            <p>$<span>1200</span></p>
                             <hr>
                             <button type="button" class="btn btn-dark botonCompra " data-id="33">Agregar al
                                 carrito</button>
@@ -220,6 +284,7 @@
             </div>
         </div>
         <script src="../js/carrito.js"></script>
+        <script src="../js/comprafina.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">

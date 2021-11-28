@@ -69,7 +69,19 @@ function leerDatosProductos(producto) {
         const productos = articulosCarrito.map(producto => {
             if (producto.id === infoProducto.id) {
                 producto.cantidad++;
-                return producto; //retorna el objeto actualizado
+                Number(producto.precio=producto.precio*producto.cantidad);
+                Swal.fire({
+  title: 'Agregado!',
+  text: "Agrego al carrito " + infoProducto.titulo,
+  imageUrl: infoProducto.imagen,
+  imageWidth: 400,
+  imageHeight: 400,
+  imageAlt: 'Custom image',
+})
+                return producto; 
+                
+                //retorna el objeto actualizado
+                
             } else {
                 return producto; //retorna los productos no duplicados
             }
@@ -111,7 +123,7 @@ function carritoHtml() {
                    <td>${producto.titulo }</td>
                    <td>${producto.cantidad}</td>
                     <td>${producto.precio}</td>
-                    <td><button class="btn btn-danger borrarProducto" data-id="${producto.id}">X</button> </td>`;
+                    <td><button class="btn btn-danger borrarProducto" data-id="${producto.id}">X</button> </td>           `;
 
         // agrega el html en el tbody
         contenedorCarrito.appendChild(row);
@@ -133,6 +145,45 @@ function limpiarHtml() {
         contenedorCarrito.removeChild(contenedorCarrito.firstChild)
     }
 };
+
+function getLS() {
+
+    if (localStorage.getItem('carrito') === null) {
+
+        productsCheck = []
+
+    } else {
+
+        productsCheck = JSON.parse(localStorage.getItem('carrito'));
+
+    }
+    return productsCheck;
+
+}
+
+
+
+function totalLive(){
+
+    total = 0
+    totalProd = getLS();
+
+    for (let i = 0; i < totalProd.length; i++) {
+
+
+        let element = Number(totalProd[i].precio * totalProd[i].cantidad);
+
+        total = total + element;
+
+        console.log(total);
+
+
+        $("#precioTablaTotal").html(`$ ${total.toLocalString('es')}`)
+    }
+
+
+};
+
 
 // map
 

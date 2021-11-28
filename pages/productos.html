@@ -9,6 +9,7 @@
     <meta name=" keywords" content="Ropa moda lentes remeras nogenere limo tienda medias gorras pilusos collares ">
     <meta name="Author" content="Nicolás Francisco Martínez">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/compraFinal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap" rel="stylesheet">
@@ -55,6 +56,66 @@
                             <a class="nav-link" href="../pages/scouting.html">Scouting</a>
                         </li>
                     </ul>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Ya casi es tuy@</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class='credit-info'>
+                                        <div class='credit-info-content'>
+                                            <table class='half-input-table'>
+                                                <tr>
+                                                    <td>Please select your card: </td>
+                                                    <td>
+                                                        <div class='dropdown' id='card-dropdown'>
+                                                            <div class='dropdown-btn' id='current-card'>Visa</div>
+                                                            <div class='dropdown-select'>
+                                                                <ul>
+                                                                    <li>Master Card</li>
+                                                                    <li>American Express</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png'
+                                                height='80' class='credit-card-image' id='credit-card-image'></img>
+                                            Card Number
+                                            <input class='input-field'></input>
+                                            Card Holder
+                                            <input class='input-field'></input>
+                                            <table class='half-input-table'>
+                                                <tr>
+                                                    <td> Expires
+                                                        <input class='input-field'></input>
+                                                    </td>
+                                                    <td>CVC
+                                                        <input class='input-field'></input>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <button class='pay-btn'>Checkout</button>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-primary">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img
@@ -89,6 +150,9 @@
                 <button type="button" class="btn btn-danger   encabezado  text-center " id="vaciarCarrito"
                     role="button">Vaciar
                     Carrito</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Finalizar compra
+</button>
             </div>
         </div>
     </div>
@@ -122,7 +186,7 @@
                     <div class="card-body">
                         <p><img src="/img/buzoatenas.jpeg" alt="Nuzo Ateneas" class=" img-fluid img_pro  "></p>
                         <h5 class="text-center card-title">Buzo Atenas</h5>
-                        <p><span class="text-center"> $3.000</span></p>
+                        <p>$<span class="text-center">3000</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="1">Agregar al carrito</button>
                     </div>
@@ -131,7 +195,7 @@
                     <div class="card-body">
                         <p><img src="/img/mediasalien.jpeg" alt="Medias Alien" class=" img-fluid img_pro"></p>
                         <h5>Medias Alien</h5>
-                        <p><span>$400</span></p>
+                        <p>$<span>400</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="2">Agregar al carrito</button>
                     </div>
@@ -140,7 +204,7 @@
                     <div class="card-body">
                         <p><img src="/img/remerabatikcolo.jpeg" alt="Notebook" class=" img-fluid img_pro"></p>
                         <h5>Remera Tye Die</h5>
-                        <p><span>$1.500</span></p>
+                        <p>$<span>1500</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="3">Agregar al carrito</button>
                     </div>
@@ -151,7 +215,7 @@
                     <div class="card-body">
                         <p><img src="/img/beanies.jpeg" alt="Gorro Beanie" class=" img-fluid img_pro"></p>
                         <h5>Gorro Beanie</h5>
-                        <p><span>$700</span></p>
+                        <p>$<span>700</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark  botonCompra " data-id="4"> Agregar al
                             carrito</button>
@@ -161,7 +225,7 @@
                     <div class="card-body">
                         <p><img src="/img/aroschock.jpeg" alt="Aros chok" class=" img-fluid img_pro"></p>
                         <h5>Aros Chok</h5>
-                        <p><span>$400</span></p>
+                        <p>$<span>400</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra ">Agregar al carrito</button>
                     </div>
@@ -170,7 +234,7 @@
                     <div class="card-body">
                         <p><img src="/img/buzoflor.webp" alt="Buzo Growing" class=" img-fluid img_pro"></p>
                         <h5>Buzo Growing Black</h5p>
-                            <p><span>$3200</span></p>
+                            <p>$<span>3200</span></p>
                             <hr>
                             <button type="button" class="btn btn-dark botonCompra " data-id="5">Agregar al
                                 carrito</button>
@@ -187,7 +251,7 @@
                     <div class="card-body">
                         <p><img src="/img/buzoflor2.jpeg" alt="Buzo Flor 2" class=" img-fluid img_pro"></p>
                         <h5>Buzo Growing White</h5>
-                        <p><span>$3.000</span></p>
+                        <p>$<span>3000</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="6">Agregar al carrito</button>
                     </div>
@@ -196,7 +260,7 @@
                     <div class="card-body">
                         <p><img src="/img/buzofungi.jpeg" alt="Buzo Fungi" class=" img-fluid img_pro"></p>
                         <h5>Buzo Fungi</h5>
-                        <p><span>$3200</span></p>
+                        <p>$<span>3200</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="7">Agregar al carrito</button>
                     </div>
@@ -205,7 +269,7 @@
                     <div class="card-body">
                         <p><img src="/img/buzosave.jpeg" alt="Buzo Save " class=" img-fluid img_pro"></p>
                         <h5>Buzo Save the World</h5>
-                        <p><span>$3000</span></p>
+                        <p>$<span>3000</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="8">Agregar al carrito</button>
                     </div>
@@ -216,7 +280,7 @@
                     <div class="card-body">
                         <p><img src="/img/lentesbalvin.jpeg" alt="Lentes Balvin" class=" img-fluid img_pro"></p>
                         <h5>Lentes Balvin</h5>
-                        <p><span>$1400</span></p>
+                        <p>$<span>1400</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="9">Agregar al carrito</button>
                     </div>
@@ -225,7 +289,7 @@
                     <div class="card-body">
                         <p><img src="/img/lentesboston.jpeg" alt="Lentes Boston" class=" img-fluid img_pro"></p>
                         <h5>Lentes Boston</h5>
-                        <p><span>$1500</span></p>
+                        <p>$<span>1500</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="10">Agregar al carrito</button>
                     </div>
@@ -234,7 +298,7 @@
                     <div class="card-body">
                         <p><img src="/img/lentescardy.jpeg" alt="Lentes Cardy" class=" img-fluid img_pro"></p>
                         <h5>Lentes Cardy</h5>
-                        <p><span>$1700</span></p>
+                        <p>$<span>1700</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="11">Agregar al carrito</button>
                     </div>
@@ -245,7 +309,7 @@
                     <div class="card-body">
                         <p><img src="/img/lenteskendall.jpeg" alt="Lentes Kendall" class=" img-fluid img_pro"></p>
                         <h5>Lentes Kendall</h5>
-                        <p><span> $1300</span></p>
+                        <p>$<span> 1300</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="13">Agregar al carrito</button>
                     </div>
@@ -254,7 +318,7 @@
                     <div class="card-body">
                         <p><img src="/img/lenteskurt.jpeg" alt="Lentes Kurt" class=" img-fluid img_pro"></p>
                         <h5>Lentes Kurt </h5>
-                        <p><span>$1800</span></p>
+                        <p>$<span>1800</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="14">Agregar al carrito</button>
                     </div>
@@ -263,7 +327,7 @@
                     <div class="card-body">
                         <p><img src="/img/lentesnass.jpeg" alt="Lentes Nass" class=" img-fluid img_pro"></p>
                         <h5>Lentes Nass</h5>
-                        <p><span>$1300</span></p>
+                        <p>$<span>1300</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="15">Agregar al carrito</button>
                     </div>
@@ -274,7 +338,7 @@
                     <div class="card-body">
                         <p><img src="/img/lentesnasty.jpeg" alt="Lentes NAsty" class=" img-fluid img_pro"></p>
                         <h5>Lentes Nasty</h5>
-                        <p><span>$1700</span></p>
+                        <p>$<span>1700</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="16">Agregar al carrito</button>
                     </div>
@@ -283,7 +347,7 @@
                     <div class="card-body">
                         <p><img src="../img/lentesqueer.jpeg" alt="Lentes Queer" class=" img-fluid img_pro"></p>
                         <h5>Lentes Queer</h5>
-                        <p><span>$1700</span></p>
+                        <p>$<span>1700</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="17">Agregar al carrito</button>
                     </div>
@@ -292,7 +356,7 @@
                     <div class="card-body">
                         <p><img src="../img/lentesshilow.jpeg" alt="Lentes Shilow" class=" img-fluid img_pro"></p>
                         <h5>Lentes Shilow</h5>
-                        <p><span>$1700</span></p>
+                        <p>$<span>1700</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="18">Agregar al carrito</button>
                     </div>
@@ -303,7 +367,7 @@
                     <div class="card-body">
                         <p><img src="../img/lentestao.jpeg" alt="Lentes Tao" class=" img-fluid img_pro"></p>
                         <h5>Lentes Tao</h5>
-                        <p><span>$1700</span></p>
+                        <p>$<span>1700</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="19">Agregar al carrito</button>
                     </div>
@@ -312,7 +376,7 @@
                     <div class="card-body">
                         <p><img src="../img/lentestrish.jpeg" alt="Lentes Trish" class=" img-fluid img_pro"></p>
                         <h5>Lentes Trish</h5>
-                        <p><span>$1700</span></p>
+                        <p>$<span>1700</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="20">Agregar al carrito</button>
                     </div>
@@ -321,7 +385,7 @@
                     <div class="card-body">
                         <p><img src="../img/mediasfire.jpeg" alt="Medias Fire" class=" img-fluid img_pro"></p>
                         <h5>Medias Fire</h5>
-                        <p><span>$500</span></p>
+                        <p>$<span>500</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="21">Agregar al carrito</button>
                     </div>
@@ -332,7 +396,7 @@
                     <div class="card-body">
                         <p><img src="../img/mediasfrute.jpeg" alt="MEdias Frute" class=" img-fluid img_pro"></p>
                         <h5>Medias Frute</h5>
-                        <p><span>$390</span></p>
+                        <p>$<span>390</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="22">Agregar al carrito</button>
                     </div>
@@ -341,7 +405,7 @@
                     <div class="card-body">
                         <p><img src="../img/mediasfuck.jpeg" alt="Medias Fuck You" class=" img-fluid img_pro"></p>
                         <h5>Medias Fuck You</h5>
-                        <p><span>$400</span></p>
+                        <p>$<span>400</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="23">Agregar al carrito</button>
                     </div>
@@ -350,7 +414,7 @@
                     <div class="card-body">
                         <p><img src="../img/mediasprideb.jpeg" alt="Medias Pride" class=" img-fluid img_pro"></p>
                         <h5>Medias Pride Black</h5>
-                        <p><span>$450</span></p>
+                        <p>$<span>450</span></p>
                         <hr>
                         <button type="button" class="btn btn-darkbotonCompra " data-id="24">Agregar al carrito</button>
                     </div>
@@ -361,7 +425,7 @@
                     <div class="card-body">
                         <p><img src="../img/mediaspridew.jpeg" alt="MEdias Pride white" class=" img-fluid img_pro"></p>
                         <h5>Medias Pride White</h5>
-                        <p><span>$400</span></p>
+                        <p>$<span>400</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark  botonCompra" data-id="25">Agregar al carrito</button>
                     </div>
@@ -370,7 +434,7 @@
                     <div class="card-body">
                         <p><img src="/img/mediassativa.jpeg" alt="Medias SAtiva" class=" img-fluid img_pro"></p>
                         <h5>Medias Sativa</h5>
-                        <p><span>$425</span></p>
+                        <p>$<span>425</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="26">Agregar al carrito</button>
                     </div>
@@ -379,7 +443,7 @@
                     <div class="card-body">
                         <p><img src="/img/mediasska.jpeg" alt="Medias Ska" class=" img-fluid img_pro"></p>
                         <h5>Medias Ska</h5>
-                        <p><span>$390</span></p>
+                        <p>$<span>390</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="27">Agregar al carrito</button>
                     </div>
@@ -390,7 +454,7 @@
                     <div class="card-body">
                         <p><img src="/img/gorragood.jpeg" alt="Gorra Good" class=" img-fluid img_pro"></p>
                         <h5>Gorra Good Luck</h5>
-                        <p><span>$650</span></p>
+                        <p>$<span>650</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="28">Agregar al carrito</button>
                     </div>
@@ -399,7 +463,7 @@
                     <div class="card-body">
                         <p><img src="/img/gorramiche.jpeg" alt="Gorra Michelangelo" class=" img-fluid img_pro"></p>
                         <h5>gorra Michelangelo</h5>
-                        <p><span>$920</span></p>
+                        <p>$<span>920</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="29">Agregar al carrito</button>
                     </div>
@@ -408,7 +472,7 @@
                     <div class="card-body">
                         <p><img src="/img/gorrarainbow.jpeg" alt="Gorra Rainbow" class=" img-fluid img_pro"></p>
                         <h5>Gorra Rainbow</h5>
-                        <p><span>$900</span></p>
+                        <p>$<span>900</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="30">Agregar al carrito</button>
                     </div>
@@ -419,7 +483,7 @@
                     <div class="card-body">
                         <p><img src="/img/remerafungi.jpeg" alt="Remera Fungi" class=" img-fluid img_pro"></p>
                         <h5>Remera Fungi</h5>
-                        <p><span>$1900</span></p>
+                        <p>$<span>1900</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="31">Agregar al carrito</button>
                     </div>
@@ -428,7 +492,7 @@
                     <div class="card-body">
                         <p><img src="/img/remerabatiksilver.jpeg" alt="Remera Silver" class=" img-fluid img_pro"></p>
                         <h5>Remera Tye Die Silver</h5p>
-                            <p><span>$1850</span></p>
+                            <p>$<span>1850</span></p>
                             <hr>
                             <button type="button" class="btn btn-dark " data-id="32">Agregar al carrito</button>
                     </div>
@@ -437,7 +501,7 @@
                     <div class="card-body">
                         <p><img src="/img/remeranoproblem.jpeg" alt="Remera No problem" class=" img-fluid img_pro"></p>
                         <h5>Remera No problem</h5>
-                        <p><span>$1200</span></p>
+                        <p>$<span>1200</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="33">Agregar al carrito</button>
                     </div>
@@ -448,7 +512,7 @@
                     <div class="card-body">
                         <p><img src="/img/collarmari.jpeg" alt="Collar MAri" class=" img-fluid img_pro"></p>
                         <h5>Collar Mary</h5>
-                        <p><span>$700</span></p>
+                        <p>$<span>700</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="34">Agregar al carrito</button>
                     </div>
@@ -457,7 +521,7 @@
                     <div class="card-body">
                         <p><img src="/img/collarcadenas.jpeg" alt="Collar cadenas" class=" img-fluid img_pro"></p>
                         <h5>Collar Chains</h5>
-                        <p><span>$600</span></p>
+                        <p>$<span>600</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="35">Agregar al carrito</button>
                     </div>
@@ -466,7 +530,7 @@
                     <div class="card-body">
                         <p><img src="/img/aroschock.jpeg" alt="Aros Chok" class=" img-fluid img_pro"></p>
                         <h5>Aros chock</h5>
-                        <p><span>$400</span></p>
+                        <p>$<span>400</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="36">Agregar al carrito</button>
                     </div>
@@ -477,7 +541,7 @@
                     <div class="card-body">
                         <p><img src="/img/pilusonegro.jpeg" alt="Piluso Negro" class="img-fluid img_pro"></p>
                         <h5>Piluso Black</h5>
-                        <p><span>$600</span></p>
+                        <p>$<span>600</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="37">Agregar al carrito</button>
                     </div>
@@ -486,7 +550,7 @@
                     <div class="card-body">
                         <p><img src="/img/pilusobatik.jpeg" alt="Piluso batik" class=" img-fluid img_pro"></p>
                         <h5>Piluso Tye Die</h5>
-                        <p><span>$750</span></p>
+                        <p>$<span>750</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="38">Agregar al carrito</button>
                     </div>
@@ -495,7 +559,7 @@
                     <div class="card-body">
                         <p><img src="/img/pilusonaranja.jpeg" alt="Piluso Naranja" class=" img-fluid img_pro"></p>
                         <h5>Piluso Orange</h5>
-                        <p><span>$600</span></p>
+                        <p>$<span>600</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="39">Agregar al carrito</button>
                     </div>
@@ -506,7 +570,7 @@
                     <div class="card-body">
                         <p><img src="/img/pilusoneon.jpeg" alt="Piluso Neon" class=" img-fluid img_pro"></p>
                         <h5>Piluso Neon</h5>
-                        <p><span>$750</span></p>
+                        <p>$4<span>750</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="40">Agregar al carrito</button>
                     </div>
@@ -515,7 +579,7 @@
                     <div class="card-body">
                         <p><img src="/img/pilusoblanco.jpeg" alt="Piluso White" class=" img-fluid img_pro"></p>
                         <h5>Piluso White</h5>
-                        <p><span>$590</span></p>
+                        <p>$<span>590</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra " data-id="41">Agregar al carrito</button>
                     </div>
@@ -524,7 +588,7 @@
                     <div class="card-body">
                         <p><img src="/img/lentesyoko.jpeg" alt="Notebook" class=" img-fluid img_pro"></p>
                         <h5>Lentes Yoko</h5>
-                        <p><span>$1500</span></p>
+                        <p>$<span>1500</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark botonCompra" data-id="42">Agregar al carrito</button>
                     </div>
@@ -533,7 +597,7 @@
                     <div class="card-body">
                         <p><img src="../img/mediasdrake.jpeg" alt="MEdias Pride white" class=" img-fluid img_pro"></p>
                         <h5>Medias Drake</h5>
-                        <p><span>$390</span></p>
+                        <p>$<span>390</span></p>
                         <hr>
                         <button type="button" class="btn btn-dark  botonCompra" data-id="43">Agregar al carrito</button>
                     </div>
@@ -604,6 +668,7 @@
     </div>
     <script src=" ../js/jquery.js"></script>
     <script src="../js/carrito.js"></script>
+    <script src="../js/comprafina.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
