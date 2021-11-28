@@ -1,6 +1,5 @@
 .encabezado {
-  font-family: 'Grenze Gotisch',
- cursive; }
+  font-family: 'Grenze Gotisch', cursive; }
 
 .scou {
   text-transform: none;
@@ -104,8 +103,7 @@ a {
   display: none; }
 
 .carrito {
-  color: white;
-  height: 10px; }
+  color: white; }
 
 img.carrito {
   color: white; }
