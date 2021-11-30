@@ -166,7 +166,8 @@ function finalizar() {
         title: 'Comprado!',
         text: "Felicidades, tu compra se realizo con exito!",
 
-    })
+    });
+    limpiarHtml();
 }
 
 function totalLive() {
