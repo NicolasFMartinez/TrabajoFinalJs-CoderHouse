@@ -69,19 +69,19 @@ function leerDatosProductos(producto) {
         const productos = articulosCarrito.map(producto => {
             if (producto.id === infoProducto.id) {
                 producto.cantidad++;
-                Number(producto.precio=producto.precio*producto.cantidad);
+                Number(producto.precio = producto.precio * producto.cantidad);
                 Swal.fire({
-  title: 'Agregado!',
-  text: "Agrego al carrito " + infoProducto.titulo,
-  imageUrl: infoProducto.imagen,
-  imageWidth: 400,
-  imageHeight: 400,
-  imageAlt: 'Custom image',
-})
-                return producto; 
-                
+                    title: 'Agregado!',
+                    text: "Agrego al carrito " + infoProducto.titulo,
+                    imageUrl: infoProducto.imagen,
+                    imageWidth: 400,
+                    imageHeight: 400,
+                    imageAlt: 'Custom image',
+                })
+                return producto;
+
                 //retorna el objeto actualizado
-                
+
             } else {
                 return producto; //retorna los productos no duplicados
             }
@@ -90,15 +90,15 @@ function leerDatosProductos(producto) {
     } else {
         //agregamos el producto al carrito
         articulosCarrito = [...articulosCarrito, infoProducto];
-        
+
         Swal.fire({
-  title: 'Agregado!',
-  text: "Agrego al carrito " + infoProducto.titulo,
-  imageUrl: infoProducto.imagen,
-  imageWidth: 400,
-  imageHeight: 400,
-  imageAlt: 'Custom image',
-})
+            title: 'Agregado!',
+            text: "Agrego al carrito " + infoProducto.titulo,
+            imageUrl: infoProducto.imagen,
+            imageWidth: 400,
+            imageHeight: 400,
+            imageAlt: 'Custom image',
+        })
     }
 
 
@@ -161,9 +161,15 @@ function getLS() {
 
 }
 
+function finalizar() {
+    Swal.fire({
+        title: 'Comprado!',
+        text: "Felicidades, tu compra se realizo con exito!",
 
+    })
+}
 
-function totalLive(){
+function totalLive() {
 
     total = 0
     totalProd = getLS();
@@ -187,14 +193,17 @@ function totalLive(){
 
 // map
 
-function iniciarMap(){
-    var coord = {lat:-34.5841939 ,lng: -58.4656398};
-    var map = new google.maps.Map(document.getElementById('map'),{
-      zoom: 15,
-      center: coord
+function iniciarMap() {
+    var coord = {
+        lat: -34.5841939,
+        lng: -58.4656398
+    };
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: coord
     });
     var marker = new google.maps.Marker({
-      position: coord,
-      map: map
+        position: coord,
+        map: map
     });
 }
